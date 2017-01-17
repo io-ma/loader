@@ -1,0 +1,129 @@
+html,body{
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.compact{
+    .spin{
+      display: block;
+    }
+  }
+  &.dot{
+    .dotted-spin{
+      display: block;
+    }
+  }
+}
+
+.spin,.dotted-spin{
+  padding: 50px;
+  border-radius: 100%;
+  background: linear-gradient(30deg, #0042FF, #F5F9D7);
+    &:after{
+    content: '';
+    display: block;
+    padding: 47px;
+    position: absolute;
+    border-radius: 100%;
+    left: 3px;
+    top: 3px;
+    background-color: #fff;
+  }
+}
+
+.spin{
+  display: none;
+  padding: 50px;
+  border-radius: 100%;
+  background: linear-gradient(30deg, #0042FF, #F5F9D7);
+  position: relative;
+   /* animation: parent-opacity 1.5s ease-in-out infinite;*/
+}
+
+.loop{
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  background-color: #fff;
+  transform-origin: 50% 100%;
+  z-index: 10;
+  animation: loop 1s ease-in-out infinite;
+}
+
+.dotted-spin{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: 2s ease-in-out infinite;
+  .loop{
+      position: absolute;
+      width: 5px;
+      height: 50px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) rotate(0deg);
+      background-color: #fff;
+      transform-origin: 50% 100%;
+      z-index: 10;
+  }
+  @for $i from 1 through 20{
+   .loop#{$i}{
+     transform: translateX(-50%) rotate(18deg * $i);
+     animation: loop#{$i} 2s ease-in-out infinite;
+    } 
+  }
+}
+
+@keyframes parent-opacity{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.3;
+  }
+}
+
+@keyframes loop{
+  0%{
+    transform: translateX(-50%) rotate(0deg);
+    width: 5px;
+  }
+  70%{
+    width: 100px;
+  }
+  100%{
+    transform: translateX(-50%) rotate(360deg);
+    width: 5px;
+  }
+}
+
+@for $i from 1 through 20{
+  @keyframes loop#{$i}{
+    0%{
+      transform: translateX(-50%) rotate(18deg*$i);
+    width: 5px;
+    }
+    70%{
+      width: 14px;
+    }
+    100%{
+      transform: translateX(-50%) rotate(360deg + 18*$i);
+    width: 5px;
+    }
+  }
+}

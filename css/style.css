@@ -1,0 +1,442 @@
+html, body {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap.compact .spin {
+  display: block;
+}
+.wrap.dot .dotted-spin {
+  display: block;
+}
+
+.spin, .dotted-spin {
+  padding: 50px;
+  border-radius: 100%;
+  background: linear-gradient(30deg, #0042FF, #F5F9D7);
+}
+.spin:after, .dotted-spin:after {
+  content: '';
+  display: block;
+  padding: 47px;
+  position: absolute;
+  border-radius: 100%;
+  left: 3px;
+  top: 3px;
+  background-color: #fff;
+}
+
+.spin {
+  display: none;
+  padding: 50px;
+  border-radius: 100%;
+  background: linear-gradient(30deg, #0042FF, #F5F9D7);
+  position: relative;
+  /* animation: parent-opacity 1.5s ease-in-out infinite;*/
+}
+
+.loop {
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  background-color: #fff;
+  transform-origin: 50% 100%;
+  z-index: 10;
+  animation: loop 1s ease-in-out infinite;
+}
+
+.dotted-spin {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: 2s ease-in-out infinite;
+}
+.dotted-spin .loop {
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  background-color: #fff;
+  transform-origin: 50% 100%;
+  z-index: 10;
+}
+.dotted-spin .loop1 {
+  transform: translateX(-50%) rotate(18deg);
+  animation: loop1 2s ease-in-out infinite;
+}
+.dotted-spin .loop2 {
+  transform: translateX(-50%) rotate(36deg);
+  animation: loop2 2s ease-in-out infinite;
+}
+.dotted-spin .loop3 {
+  transform: translateX(-50%) rotate(54deg);
+  animation: loop3 2s ease-in-out infinite;
+}
+.dotted-spin .loop4 {
+  transform: translateX(-50%) rotate(72deg);
+  animation: loop4 2s ease-in-out infinite;
+}
+.dotted-spin .loop5 {
+  transform: translateX(-50%) rotate(90deg);
+  animation: loop5 2s ease-in-out infinite;
+}
+.dotted-spin .loop6 {
+  transform: translateX(-50%) rotate(108deg);
+  animation: loop6 2s ease-in-out infinite;
+}
+.dotted-spin .loop7 {
+  transform: translateX(-50%) rotate(126deg);
+  animation: loop7 2s ease-in-out infinite;
+}
+.dotted-spin .loop8 {
+  transform: translateX(-50%) rotate(144deg);
+  animation: loop8 2s ease-in-out infinite;
+}
+.dotted-spin .loop9 {
+  transform: translateX(-50%) rotate(162deg);
+  animation: loop9 2s ease-in-out infinite;
+}
+.dotted-spin .loop10 {
+  transform: translateX(-50%) rotate(180deg);
+  animation: loop10 2s ease-in-out infinite;
+}
+.dotted-spin .loop11 {
+  transform: translateX(-50%) rotate(198deg);
+  animation: loop11 2s ease-in-out infinite;
+}
+.dotted-spin .loop12 {
+  transform: translateX(-50%) rotate(216deg);
+  animation: loop12 2s ease-in-out infinite;
+}
+.dotted-spin .loop13 {
+  transform: translateX(-50%) rotate(234deg);
+  animation: loop13 2s ease-in-out infinite;
+}
+.dotted-spin .loop14 {
+  transform: translateX(-50%) rotate(252deg);
+  animation: loop14 2s ease-in-out infinite;
+}
+.dotted-spin .loop15 {
+  transform: translateX(-50%) rotate(270deg);
+  animation: loop15 2s ease-in-out infinite;
+}
+.dotted-spin .loop16 {
+  transform: translateX(-50%) rotate(288deg);
+  animation: loop16 2s ease-in-out infinite;
+}
+.dotted-spin .loop17 {
+  transform: translateX(-50%) rotate(306deg);
+  animation: loop17 2s ease-in-out infinite;
+}
+.dotted-spin .loop18 {
+  transform: translateX(-50%) rotate(324deg);
+  animation: loop18 2s ease-in-out infinite;
+}
+.dotted-spin .loop19 {
+  transform: translateX(-50%) rotate(342deg);
+  animation: loop19 2s ease-in-out infinite;
+}
+.dotted-spin .loop20 {
+  transform: translateX(-50%) rotate(360deg);
+  animation: loop20 2s ease-in-out infinite;
+}
+
+@keyframes parent-opacity {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes loop {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+    width: 5px;
+  }
+  70% {
+    width: 100px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+    width: 5px;
+  }
+}
+@keyframes loop1 {
+  0% {
+    transform: translateX(-50%) rotate(18deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(378deg);
+    width: 5px;
+  }
+}
+@keyframes loop2 {
+  0% {
+    transform: translateX(-50%) rotate(36deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(396deg);
+    width: 5px;
+  }
+}
+@keyframes loop3 {
+  0% {
+    transform: translateX(-50%) rotate(54deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(414deg);
+    width: 5px;
+  }
+}
+@keyframes loop4 {
+  0% {
+    transform: translateX(-50%) rotate(72deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(432deg);
+    width: 5px;
+  }
+}
+@keyframes loop5 {
+  0% {
+    transform: translateX(-50%) rotate(90deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(450deg);
+    width: 5px;
+  }
+}
+@keyframes loop6 {
+  0% {
+    transform: translateX(-50%) rotate(108deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(468deg);
+    width: 5px;
+  }
+}
+@keyframes loop7 {
+  0% {
+    transform: translateX(-50%) rotate(126deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(486deg);
+    width: 5px;
+  }
+}
+@keyframes loop8 {
+  0% {
+    transform: translateX(-50%) rotate(144deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(504deg);
+    width: 5px;
+  }
+}
+@keyframes loop9 {
+  0% {
+    transform: translateX(-50%) rotate(162deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(522deg);
+    width: 5px;
+  }
+}
+@keyframes loop10 {
+  0% {
+    transform: translateX(-50%) rotate(180deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(540deg);
+    width: 5px;
+  }
+}
+@keyframes loop11 {
+  0% {
+    transform: translateX(-50%) rotate(198deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(558deg);
+    width: 5px;
+  }
+}
+@keyframes loop12 {
+  0% {
+    transform: translateX(-50%) rotate(216deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(576deg);
+    width: 5px;
+  }
+}
+@keyframes loop13 {
+  0% {
+    transform: translateX(-50%) rotate(234deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(594deg);
+    width: 5px;
+  }
+}
+@keyframes loop14 {
+  0% {
+    transform: translateX(-50%) rotate(252deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(612deg);
+    width: 5px;
+  }
+}
+@keyframes loop15 {
+  0% {
+    transform: translateX(-50%) rotate(270deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(630deg);
+    width: 5px;
+  }
+}
+@keyframes loop16 {
+  0% {
+    transform: translateX(-50%) rotate(288deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(648deg);
+    width: 5px;
+  }
+}
+@keyframes loop17 {
+  0% {
+    transform: translateX(-50%) rotate(306deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(666deg);
+    width: 5px;
+  }
+}
+@keyframes loop18 {
+  0% {
+    transform: translateX(-50%) rotate(324deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(684deg);
+    width: 5px;
+  }
+}
+@keyframes loop19 {
+  0% {
+    transform: translateX(-50%) rotate(342deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(702deg);
+    width: 5px;
+  }
+}
+@keyframes loop20 {
+  0% {
+    transform: translateX(-50%) rotate(360deg);
+    width: 5px;
+  }
+  70% {
+    width: 14px;
+  }
+  100% {
+    transform: translateX(-50%) rotate(720deg);
+    width: 5px;
+  }
+}
